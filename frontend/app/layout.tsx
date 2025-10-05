@@ -5,9 +5,12 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'Competitor Intelligence Tracker',
+  description: 'Competitor Intelligence Tracker is an AI-powered platform designed to help startups and enterprises monitor, analyze, and act on competitor activities in real-time.',
+  generator: 'Next.js',
+  icons:{
+    icon:'/Icon.jpg',
+  },
 }
 
 export default function RootLayout({
