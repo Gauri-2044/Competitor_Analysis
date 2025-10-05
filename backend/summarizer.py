@@ -12,7 +12,8 @@ def summarize_report(analyzed_data):
     """
     try:
         updates_text = "\n".join(analyzed_data["key_updates"])
-        response = openai.ChatCompletion.create(
+        
+        response = openai.chat.completions.create(
             model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": "You are an AI market analyst."},
@@ -21,7 +22,8 @@ def summarize_report(analyzed_data):
             temperature=0.5,
             max_tokens=100
         )
-        summary = response["choices"][0]["message"]["content"].strip()
+        
+        summary = response.choices[0].message.content.strip()
         analyzed_data["summary"] = summary
         return analyzed_data
     except Exception as e:

@@ -20,46 +20,30 @@ def index():
 
 @app.route("/track", methods=["POST"])
 def track_competitors():
-    competitors = request.json.get("competitors", [])
-    results = []
-
-    if not competitors:
-        return jsonify({"error": "No competitors provided"}), 400
-
     try:
+        competitors = request.json.get("competitors", [])
+        results = []
+
         for competitor in competitors:
             competitor_name = competitor.get("name", "Unknown")
-            print("Processing competitor:", competitor_name)
+            try:
+                # Example: articles could come from scraper
+                articles = [{"title": "No updates found"}]  # placeholder
+                analysis = analyze_changes(competitor_name, articles)
+                summary_text = summarize_report(analysis)
+            except Exception as e:
+                summary_text = f"No summary available: {str(e)}"
+                analysis = {"impact": "neutral", "suggestion": "Monitor updates regularly"}
 
-            # Fetch raw data from scraper
-            raw_data = fetch_competitor_data(competitor_name)
-            if "error" in raw_data:
-                results.append({
-                    "name": competitor_name,
-                    "summary": raw_data["error"],
-                    "impact": "neutral",
-                    "suggestion": "No suggestion",
-                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                })
-                continue
-
-            # Extract articles
-            articles = raw_data.get("articles", [{"title": "No data found", "content": ""}])
-
-            # Analyze changes
-            analysis = analyze_changes(competitor_name, articles)
-
-            # Summarize using OpenAI
-            summary = summarize_report(analysis)
-
-            # Prepare structured output
-            results.append({
+            result = {
                 "name": competitor_name,
-                "summary": summary,
-                "impact": "neutral",          # You can update this logic later
-                "suggestion": "No suggestion", # You can generate suggestion dynamically later
+                "summary": summary_text,
+                "impact": analysis.get("impact", "neutral"),
+                "suggestion": analysis.get("suggestion", "Monitor updates regularly"),
                 "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            })
+            }
+            print(result)
+            results.append(result)
 
         return jsonify(results)
 
