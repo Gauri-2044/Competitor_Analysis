@@ -16,7 +16,9 @@ __pycache__/
 .vscode/
 .idea/
 *.bak
-
+./venv/
+./env/
+.venv/
 # -----------------------------
 # Backend (Python / Flask / FastAPI)
 # -----------------------------
