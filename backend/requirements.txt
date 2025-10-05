@@ -7,3 +7,8 @@ sqlite3-bro
 os
 sqlite3
 python-dotenv
+firebase-admin
+langchain
+pymongo
+scrapy
+gunicorn
