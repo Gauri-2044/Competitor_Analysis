@@ -9,8 +9,6 @@
 ![OpenAI](https://img.shields.io/badge/AI-OpenAI-412991?logo=openai)
 ![Firebase](https://img.shields.io/badge/Database-Firebase-orange?logo=firebase)
 ![Docker](https://img.shields.io/badge/Containerization-Docker-0db7ed?logo=docker)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Contributors](https://img.shields.io/github/contributors/yourusername/competitor-intelligence-tracker)
 ![Version](https://img.shields.io/badge/Version-1.0.0-blue)
 
 ## 📌 Description  
@@ -21,7 +19,6 @@ The system automatically tracks competitor websites, social media updates, and m
 
 It transforms raw data into daily, weekly, or monthly intelligence reports, helping organizations stay one step ahead in the market.
 
----
 
 ## 💡 Key Features  
 
@@ -32,7 +29,6 @@ It transforms raw data into daily, weekly, or monthly intelligence reports, help
 - 📈 **Automated business intelligence reports** (weekly/monthly)  
 - 🔔 **Smart notifications** for high-impact or urgent updates  
 
----
 
 ## ⚙ Tech Stack  
 
@@ -57,7 +53,6 @@ It transforms raw data into daily, weekly, or monthly intelligence reports, help
 4. 📊 Reports are stored in the dashboard & review tab  
 5. 💡 Company receives suggestions and alerts for decision-making  
 
----
 
 ## 🧩 Future Enhancements  
 
@@ -66,13 +61,12 @@ It transforms raw data into daily, weekly, or monthly intelligence reports, help
 - 🔗 Integration with more public APIs and employee signals  
 - 🧭 Real-time AI-driven strategy recommendations  
 
----
 
 ## ⚙ Setup & Installation  
 
 Follow these steps to run the **Competitor Intelligence Tracker** locally or in a containerized environment.
 
----
+
 
 ### 1️⃣ Clone the Repository  
 
