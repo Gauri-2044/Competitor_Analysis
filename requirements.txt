@@ -12,3 +12,4 @@ langchain
 pymongo
 scrapy
 gunicorn
+flask-cors
