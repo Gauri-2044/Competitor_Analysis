@@ -1,0 +1,59 @@
+# -----------------------------
+# Global
+# -----------------------------
+__pycache__/
+*.py[cod]
+*.log
+*.env
+.env
+.DS_Store
+*.sqlite3
+*.db
+*.pid
+*.pyproj
+*.sublime-project
+*.sublime-workspace
+.vscode/
+.idea/
+*.bak
+
+# -----------------------------
+# Backend (Python / Flask / FastAPI)
+# -----------------------------
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/instance/
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.coverage
+backend/htmlcov/
+backend/venv/
+backend/env/
+backend/.venv/
+backend/.env.*
+backend/*.sqlite3
+
+# -----------------------------
+# Frontend (React / Next.js)
+# -----------------------------
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.production.local
+frontend/.env.test.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.vercel/
+frontend/.turbo/
+
+# -----------------------------
+# OS / Editor files
+# -----------------------------
+Thumbs.db
+ehthumbs.db
+desktop.ini
