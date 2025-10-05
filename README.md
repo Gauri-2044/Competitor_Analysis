@@ -71,8 +71,8 @@ Follow these steps to run the **Competitor Intelligence Tracker** locally or in 
 ### 1️⃣ Clone the Repository  
 
 ```bash
-git clone https://github.com/yourusername/competitor-intelligence-tracker.git
-cd competitor-intelligence-tracker
+git clone https://github.com/yourusername/Competitor_Analysis.git
+cd Competitor_Analysis
 ```
 
 ### 2️⃣ Create a Virtual Environment
